@@ -5,11 +5,12 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-export default function page({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined }
-}) {
+export default async function page(
+  props: {
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+  }
+) {
+  const searchParams = await props.searchParams;
   return (
     <Card>
       <CardHeader>

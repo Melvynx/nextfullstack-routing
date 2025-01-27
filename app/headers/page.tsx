@@ -3,8 +3,8 @@ import { headers } from "next/headers"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Typography } from "@/components/ui/typography"
 
-export default function Page() {
-  const headerList = headers()
+export default async function Page() {
+  const headerList = await headers()
 
   const jsx = []
 

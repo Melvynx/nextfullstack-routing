@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-"use client"
+"use client";
+import { use } from "react";
 
 import { useRouter } from "next/navigation"
 
@@ -13,13 +14,14 @@ import { Typography } from "@/components/ui/typography"
 
 import { PICTURES } from "../../../pictures.data"
 
-export default function Page({
-  params,
-}: {
-  params: {
-    pictureId: string
+export default function Page(
+  props: {
+    params: Promise<{
+      pictureId: string
+    }>
   }
-}) {
+) {
+  const params = use(props.params);
   const router = useRouter()
 
   const picture = PICTURES[Number(params.pictureId) - 1]

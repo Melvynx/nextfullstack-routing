@@ -15,16 +15,14 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
+
   description: siteConfig.description,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
-  },
+  }
 }
 
 interface RootLayoutProps {
@@ -57,3 +55,36 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </>
   )
 }
+
+export const viewport = {
+  themeColor: [
+    {
+      title: {
+        default: siteConfig.name,
+        template: `%s - ${siteConfig.name}`,
+      },
+
+      description: siteConfig.description,
+
+      icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon-16x16.png",
+        apple: "/apple-touch-icon.png",
+      }
+    },
+    {
+      title: {
+        default: siteConfig.name,
+        template: `%s - ${siteConfig.name}`,
+      },
+
+      description: siteConfig.description,
+
+      icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon-16x16.png",
+        apple: "/apple-touch-icon.png",
+      }
+    },
+  ]
+};

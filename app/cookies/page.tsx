@@ -6,10 +6,10 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Typography } from "@/components/ui/typography"
 
-export default function Page() {
-  const cookieStore = cookies()
+export default async function Page() {
+  const cookieStore = await cookies()
   return (
-    <Card>
+    (<Card>
       <CardHeader>
         <CardTitle>Cookies</CardTitle>
       </CardHeader>
@@ -30,7 +30,7 @@ export default function Page() {
                 formAction={async () => {
                   "use server"
 
-                  const cookieStoreSet = cookies()
+                  const cookieStoreSet = await cookies()
 
                   cookieStoreSet.delete(cookie.name)
                 }}
@@ -46,7 +46,7 @@ export default function Page() {
           action={async (formData: FormData) => {
             "use server"
 
-            const cookieStoreSet = cookies()
+            const cookieStoreSet = await cookies()
 
             cookieStoreSet.set(
               formData.get("name") as string,
@@ -66,6 +66,6 @@ export default function Page() {
           <Button type="submit">Set Cookie</Button>
         </form>
       </CardContent>
-    </Card>
-  )
+    </Card>)
+  );
 }
