@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Typography } from "@/components/ui/typography"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Typography } from "@/components/ui/typography";
 
-import { deleteUser, updateUser } from "./action"
+import { deleteUser, updateUser } from "./action";
 
 /* 
 fetch("http://localhost:3000/server-actions/rcc", {
@@ -28,21 +28,21 @@ fetch("http://localhost:3000/server-actions/rcc", {
 
 export default function Page() {
   const handleSubmit = async (formData: FormData) => {
-    const username = formData.get("username") as string
-    const email = formData.get("email") as string
+    const username = formData.get("username") as string;
+    const email = formData.get("email") as string;
 
     try {
       await updateUser("id", {
         username,
         email,
-      })
+      });
 
-      alert("User successfully updated")
+      alert("User successfully updated");
     } catch (e: unknown) {
-      const error = e as Error
-      alert(error.message)
+      const error = e as Error;
+      alert(error.message);
     }
-  }
+  };
 
   return (
     <Card>
@@ -53,9 +53,9 @@ export default function Page() {
         <Typography>Delete</Typography>
         <Button
           onClick={async () => {
-            await deleteUser("1")
+            await deleteUser("1");
 
-            alert("User successfully deleted")
+            alert("User successfully deleted");
           }}
         >
           Delete
@@ -64,8 +64,8 @@ export default function Page() {
         <form
           className="flex flex-col gap-2"
           onSubmit={(e) => {
-            e.preventDefault()
-            handleSubmit(new FormData(e.currentTarget))
+            e.preventDefault();
+            handleSubmit(new FormData(e.currentTarget));
           }}
         >
           <Input name="username" />
@@ -74,5 +74,5 @@ export default function Page() {
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }

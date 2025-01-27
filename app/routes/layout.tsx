@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 import {
   Card,
@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,5 +17,5 @@ export default function layout({ children }: { children: React.ReactNode }) {
       </CardHeader>
       <CardContent>{children}</CardContent>
     </Card>
-  )
+  );
 }

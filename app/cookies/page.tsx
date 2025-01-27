@@ -1,15 +1,15 @@
-import { cookies } from "next/headers"
+import { cookies } from "next/headers";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Typography } from "@/components/ui/typography"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Typography } from "@/components/ui/typography";
 
 export default async function Page() {
-  const cookieStore = await cookies()
+  const cookieStore = await cookies();
   return (
-    (<Card>
+    <Card>
       <CardHeader>
         <CardTitle>Cookies</CardTitle>
       </CardHeader>
@@ -28,11 +28,11 @@ export default async function Page() {
                 className="m-2"
                 variant="secondary"
                 formAction={async () => {
-                  "use server"
+                  "use server";
 
-                  const cookieStoreSet = await cookies()
+                  const cookieStoreSet = await cookies();
 
-                  cookieStoreSet.delete(cookie.name)
+                  cookieStoreSet.delete(cookie.name);
                 }}
               >
                 Delete
@@ -44,14 +44,14 @@ export default async function Page() {
         <form
           className="flex flex-col gap-2 rounded border-2 border-dashed p-4"
           action={async (formData: FormData) => {
-            "use server"
+            "use server";
 
-            const cookieStoreSet = await cookies()
+            const cookieStoreSet = await cookies();
 
             cookieStoreSet.set(
               formData.get("name") as string,
-              formData.get("value") as string
-            )
+              formData.get("value") as string,
+            );
           }}
         >
           <Typography variant="h3">Add new cookie</Typography>
@@ -66,6 +66,6 @@ export default async function Page() {
           <Button type="submit">Set Cookie</Button>
         </form>
       </CardContent>
-    </Card>)
+    </Card>
   );
 }

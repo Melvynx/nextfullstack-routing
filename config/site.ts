@@ -1,7 +1,7 @@
-export type SiteConfig = typeof siteConfig
+export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "NextReact",
+  name: "NextFullStack",
   description:
     "Understand and learn Next.js 13 using this application as a reference.",
   mainNav: [
@@ -15,4 +15,4 @@ export const siteConfig = {
     github: "https://github.com/Melvynx/nextreact-nextjs13-routing",
     docs: "https://codelynx.dev/nextreact/nextjs",
   },
-}
+};

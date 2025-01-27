@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 import {
   Card,
@@ -6,8 +6,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Typography } from "@/components/ui/typography"
+} from "@/components/ui/card";
+import { Typography } from "@/components/ui/typography";
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
@@ -21,5 +21,5 @@ export default function layout({ children }: { children: React.ReactNode }) {
       </CardHeader>
       <CardContent>{children}</CardContent>
     </Card>
-  )
+  );
 }

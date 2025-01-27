@@ -1,12 +1,12 @@
-import { headers } from "next/headers"
+import { headers } from "next/headers";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Typography } from "@/components/ui/typography"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Typography } from "@/components/ui/typography";
 
 export default async function Page() {
-  const headerList = await headers()
+  const headerList = await headers();
 
-  const jsx = []
+  const jsx = [];
 
   for (const [key, value] of headerList.entries()) {
     jsx.push(
@@ -17,8 +17,8 @@ export default async function Page() {
         <Typography>
           Value: <Typography variant="code">{value}</Typography>
         </Typography>
-      </div>
-    )
+      </div>,
+    );
   }
 
   return (
@@ -28,5 +28,5 @@ export default async function Page() {
       </CardHeader>
       <CardContent className="flex flex-col gap-4">{jsx}</CardContent>
     </Card>
-  )
+  );
 }

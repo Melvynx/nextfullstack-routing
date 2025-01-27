@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 
 export default function page() {
   return (
@@ -15,5 +15,5 @@ export default function page() {
       </CardHeader>
       <CardContent>Some users...</CardContent>
     </Card>
-  )
+  );
 }

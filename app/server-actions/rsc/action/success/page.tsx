@@ -3,13 +3,11 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 
-export default async function page(
-  props: {
-    searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-  }
-) {
+export default async function page(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
   const searchParams = await props.searchParams;
   return (
     <Card>
@@ -18,5 +16,5 @@ export default async function page(
         <CardDescription>{JSON.stringify(searchParams)}</CardDescription>
       </CardHeader>
     </Card>
-  )
+  );
 }

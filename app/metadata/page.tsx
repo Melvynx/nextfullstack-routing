@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Title Page",
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-  }
-}
+  },
+};
 
 export default function Home() {
-  return <p>...</p>
+  return <p>...</p>;
 }

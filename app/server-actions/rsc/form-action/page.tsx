@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function page() {
   return (
@@ -12,9 +12,9 @@ export default function page() {
           <Button
             type="submit"
             formAction={async () => {
-              "use server"
+              "use server";
 
-              console.log("Delete button clicked")
+              console.log("Delete button clicked");
             }}
           >
             Delete
@@ -22,9 +22,9 @@ export default function page() {
           <Button
             type="submit"
             formAction={async () => {
-              "use server"
+              "use server";
 
-              console.log("Update button clicked")
+              console.log("Update button clicked");
             }}
           >
             Update
@@ -32,5 +32,5 @@ export default function page() {
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }

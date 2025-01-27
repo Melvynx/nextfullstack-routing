@@ -2,36 +2,34 @@
 "use client";
 import { use } from "react";
 
-import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation";
 
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog"
-import { Typography } from "@/components/ui/typography"
+} from "@/components/ui/dialog";
+import { Typography } from "@/components/ui/typography";
 
-import { PICTURES } from "../../../pictures.data"
+import { PICTURES } from "../../../pictures.data";
 
-export default function Page(
-  props: {
-    params: Promise<{
-      pictureId: string
-    }>
-  }
-) {
+export default function Page(props: {
+  params: Promise<{
+    pictureId: string;
+  }>;
+}) {
   const params = use(props.params);
-  const router = useRouter()
+  const router = useRouter();
 
-  const picture = PICTURES[Number(params.pictureId) - 1]
-  console.log({ params: params.pictureId, picture })
+  const picture = PICTURES[Number(params.pictureId) - 1];
+  console.log({ params: params.pictureId, picture });
 
   return (
     <Dialog
       open={true}
       onOpenChange={() => {
-        router.back()
+        router.back();
       }}
     >
       <DialogContent>
@@ -47,5 +45,5 @@ export default function Page(
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

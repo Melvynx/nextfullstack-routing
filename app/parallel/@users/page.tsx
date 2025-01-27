@@ -4,12 +4,12 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 
-export const dynamic = "force-dynamic"
+export const dynamic = "force-dynamic";
 
 export default function page() {
-  throw new Error("This is an error")
+  throw new Error("This is an error");
   return (
     <Card>
       <CardHeader>
@@ -18,5 +18,5 @@ export default function page() {
       </CardHeader>
       <CardContent>Some users...</CardContent>
     </Card>
-  )
+  );
 }

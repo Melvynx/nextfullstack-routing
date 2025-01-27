@@ -4,8 +4,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { ThrowButton } from "@/components/utils/ThrowButton"
+} from "@/components/ui/card";
+import { ThrowButton } from "@/components/utils/ThrowButton";
 
 export default function page() {
   return (
@@ -18,5 +18,5 @@ export default function page() {
         <ThrowButton />
       </CardContent>
     </Card>
-  )
+  );
 }

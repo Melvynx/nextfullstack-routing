@@ -1,7 +1,7 @@
-import React from "react"
-import Link from "next/link"
+import React from "react";
+import Link from "next/link";
 
-import { buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button";
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
@@ -39,5 +39,5 @@ export default function layout({ children }: { children: React.ReactNode }) {
       </div>
       {children}
     </div>
-  )
+  );
 }

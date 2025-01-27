@@ -1,13 +1,13 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 
 export default function NotFound() {
   return (
@@ -30,5 +30,5 @@ export default function NotFound() {
         </Link>
       </CardContent>
     </Card>
-  )
+  );
 }

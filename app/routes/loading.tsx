@@ -1,7 +1,7 @@
-import { Loader2 } from "lucide-react"
+import { Loader2 } from "lucide-react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Timer } from "@/components/utils/Timer"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Timer } from "@/components/utils/Timer";
 
 export default function Loading() {
   // Or a custom loading skeleton component
@@ -15,5 +15,5 @@ export default function Loading() {
         <Timer />
       </CardContent>
     </Card>
-  )
+  );
 }

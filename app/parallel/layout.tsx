@@ -1,17 +1,17 @@
-import React from "react"
-import Link from "next/link"
+import React from "react";
+import Link from "next/link";
 
-import { buttonVariants } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { buttonVariants } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Layout({
   children,
   users,
   invoices,
 }: {
-  children: React.ReactNode
-  users: React.ReactNode
-  invoices: React.ReactNode
+  children: React.ReactNode;
+  users: React.ReactNode;
+  invoices: React.ReactNode;
 }) {
   return (
     <Card>
@@ -35,5 +35,5 @@ export default function Layout({
         {invoices}
       </CardContent>
     </Card>
-  )
+  );
 }
