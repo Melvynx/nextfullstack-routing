@@ -46,6 +46,7 @@ export default [
       "node_modules",
       "*.esm.js",
       "*.mjs",
+      "*.config.js",
     ],
   },
 ];
