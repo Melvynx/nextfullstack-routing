@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import {
   Card,
   CardContent,
@@ -9,6 +8,7 @@ import {
 import { Typography } from "@/components/ui/typography";
 import { BackButton } from "@/components/utils/BackButton";
 
+import Image from "next/image";
 import { PICTURES } from "../../pictures.data";
 
 export default async function Page(props: {
@@ -27,7 +27,13 @@ export default async function Page(props: {
       </CardHeader>
       <CardContent>
         {picture ? (
-          <img src={picture} alt="some photo" />
+          <Image
+            width={100}
+            height={100}
+            src={picture}
+            alt="some photo"
+            className="w-full h-auto"
+          />
         ) : (
           <Typography>No photo</Typography>
         )}
