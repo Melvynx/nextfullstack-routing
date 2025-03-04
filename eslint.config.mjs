@@ -39,6 +39,13 @@ export default [
   },
   // Ignore files
   {
-    ignores: ["dist/*", ".cache", "public", "node_modules", "*.esm.js"],
+    ignores: [
+      "dist/*",
+      ".cache",
+      "public",
+      "node_modules",
+      "*.esm.js",
+      "*.mjs",
+    ],
   },
 ];

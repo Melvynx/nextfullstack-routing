@@ -1,52 +1,24 @@
+import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { ThemeToggle } from "./theme-toggle";
+import { buttonVariants } from "./ui/button";
 
-import { siteConfig } from "@/config/site";
-import { buttonVariants } from "@/components/ui/button";
-import { Icons } from "@/components/icons";
-import { MainNav } from "@/components/main-nav";
-import { ThemeToggle } from "@/components/theme-toggle";
-
-export function SiteHeader() {
+export const Header = () => {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
-      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <MainNav items={siteConfig.mainNav} />
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <nav className="flex items-center space-x-1">
-            <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "icon",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.gitHub className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
-            <Link
-              href={siteConfig.links.twitter}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "icon",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.twitter className="h-5 w-5 fill-current" />
-                <span className="sr-only">Twitter</span>
-              </div>
-            </Link>
-            <ThemeToggle />
-          </nav>
-        </div>
-      </div>
+    <header className="px-2 py-3 border-b border-accent flex items-center gap-2">
+      <Image src="/logo.png" alt="NextFullStack" width={32} height={32} />
+      <Link href="/" className="font-bold font-mono">
+        NextFullStack
+      </Link>
+      <div className="flex-1" />
+      <Link
+        href="https://to.codeline.app/nextfullstack"
+        className={buttonVariants({ size: "icon", variant: "outline" })}
+      >
+        <ExternalLink size={16} />
+      </Link>
+      <ThemeToggle />
     </header>
   );
-}
+};
