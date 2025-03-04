@@ -5,20 +5,19 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Typography } from "@/components/ui/typography"
-import { BackButton } from "@/components/utils/BackButton"
+} from "@/components/ui/card";
+import { Typography } from "@/components/ui/typography";
+import { BackButton } from "@/components/utils/BackButton";
 
-import { PICTURES } from "../../pictures.data"
+import { PICTURES } from "../../pictures.data";
 
-export default function Page({
-  params,
-}: {
-  params: {
-    pictureId: string
-  }
+export default async function Page(props: {
+  params: Promise<{
+    pictureId: string;
+  }>;
 }) {
-  const picture = PICTURES[Number(params.pictureId) - 1]
+  const params = await props.params;
+  const picture = PICTURES[Number(params.pictureId) - 1];
   return (
     <Card>
       <CardHeader>
@@ -34,5 +33,5 @@ export default function Page({
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

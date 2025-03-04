@@ -1,13 +1,13 @@
-import { cookies } from "next/headers"
+import { cookies } from "next/headers";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Typography } from "@/components/ui/typography"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Typography } from "@/components/ui/typography";
 
-export default function Page() {
-  const cookieStore = cookies()
+export default async function Page() {
+  const cookieStore = await cookies();
   return (
     <Card>
       <CardHeader>
@@ -28,11 +28,11 @@ export default function Page() {
                 className="m-2"
                 variant="secondary"
                 formAction={async () => {
-                  "use server"
+                  "use server";
 
-                  const cookieStoreSet = cookies()
+                  const cookieStoreSet = await cookies();
 
-                  cookieStoreSet.delete(cookie.name)
+                  cookieStoreSet.delete(cookie.name);
                 }}
               >
                 Delete
@@ -44,14 +44,14 @@ export default function Page() {
         <form
           className="flex flex-col gap-2 rounded border-2 border-dashed p-4"
           action={async (formData: FormData) => {
-            "use server"
+            "use server";
 
-            const cookieStoreSet = cookies()
+            const cookieStoreSet = await cookies();
 
             cookieStoreSet.set(
               formData.get("name") as string,
-              formData.get("value") as string
-            )
+              formData.get("value") as string,
+            );
           }}
         >
           <Typography variant="h3">Add new cookie</Typography>
@@ -67,5 +67,5 @@ export default function Page() {
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }

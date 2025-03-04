@@ -1,3 +1,3 @@
 export default function page() {
-  return <div>groups...</div>
+  return <div>groups...</div>;
 }

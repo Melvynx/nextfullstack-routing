@@ -1,7 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import { LucideIcon, LucideProps, Moon, SunMedium, Twitter } from "lucide-react"
+import {
+  LucideIcon,
+  LucideProps,
+  Moon,
+  SunMedium,
+  Twitter,
+} from "lucide-react";
 
-export type Icon = LucideIcon
+export type Icon = LucideIcon;
 
 export const Icons = {
   sun: SunMedium,
@@ -24,4 +30,4 @@ export const Icons = {
       ></path>
     </svg>
   ),
-}
+};

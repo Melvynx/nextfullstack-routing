@@ -1,8 +1,8 @@
-import { redirect } from "next/navigation"
+import { redirect } from "next/navigation";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 
 export default function page() {
   return (
@@ -14,19 +14,19 @@ export default function page() {
         <form
           className="flex flex-col gap-2"
           action={async (formData: FormData) => {
-            "use server"
+            "use server";
 
-            const username = formData.get("username") as string
-            const email = formData.get("email") as string
+            const username = formData.get("username") as string;
+            const email = formData.get("email") as string;
 
             const searchParams = new URLSearchParams({
               username,
               email,
-            })
+            });
 
-            const url = `/server-actions/rsc/action/success?${searchParams}`
+            const url = `/server-actions/rsc/action/success?${searchParams}`;
 
-            redirect(url)
+            redirect(url);
           }}
         >
           <Input name="username" />
@@ -35,5 +35,5 @@ export default function page() {
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }

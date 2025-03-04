@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation";
 
-import { Button } from "../ui/button"
+import { Button } from "../ui/button";
 
 export const BackButton = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Button
       variant="outline"
       size="sm"
       className="w-fit"
       onClick={() => {
-        router.back()
+        router.back();
       }}
     >
       Back
     </Button>
-  )
-}
+  );
+};

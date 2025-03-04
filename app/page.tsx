@@ -1,14 +1,14 @@
-import Link from "next/link"
+import Link from "next/link";
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
+import { siteConfig } from "@/config/site";
 
 export default function IndexPage() {
   return (
@@ -84,5 +84,5 @@ export default function IndexPage() {
         </Link>
       </CardContent>
     </Card>
-  )
+  );
 }

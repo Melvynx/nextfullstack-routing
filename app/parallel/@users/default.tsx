@@ -1,3 +1,3 @@
 export default function Default() {
-  return <p>default users</p>
+  return <p>default users</p>;
 }

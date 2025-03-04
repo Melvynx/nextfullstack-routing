@@ -1,31 +1,31 @@
-"use server"
+"use server";
 
 export const deleteUser = async (userId: string) => {
   console.log("delete", {
     userId,
-  })
+  });
 
-  return "deleted"
-}
+  return "deleted";
+};
 
 export const updateUser = async (
   userId: string,
   data: {
-    username: string
-    email: string
-  }
+    username: string;
+    email: string;
+  },
 ) => {
   if (data.username === "error") {
-    throw new Error("Invalid data")
+    throw new Error("Invalid data");
   }
 
   const parsed =
-    data.username.toLocaleUpperCase() + " x " + data.email.toLocaleUpperCase()
+    data.username.toLocaleUpperCase() + " x " + data.email.toLocaleUpperCase();
 
   console.log("update", {
     userId,
     parsed,
-  })
+  });
 
-  return "updated"
-}
+  return "updated";
+};
